@@ -1,34 +1,34 @@
 package studentgrade;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import junit.framework.TestCase;
+/**
+ * Assignment Task: Re-implementing tests using JUnit 5.
+ * Maintenance Type: Perfective Maintenance.
+ */
 
-/* JUnit 3.8.1. */
-public class StudentGradeTest extends TestCase {
-    
-    public StudentGradeTest(String testName) {
-        super(testName);
-    }
+public class StudentGradeTest {
 
+    @Test
     public void testGetGrade95() {
-        System.out.println("getGrade 95");
         int mark = 95;
         String expResult = "A";
         String result = StudentGrade.getGrade(mark);
         assertEquals(expResult, result);
     }
 
+    @Test
     public void testGetGrade85() {
-        System.out.println("getGrade 85");
         int mark = 85;
         String expResult = "B";
         String result = StudentGrade.getGrade(mark);
         assertEquals(expResult, result);
     }
-    
+
+    @Test
     public void testGetGrade75() {
-        System.out.println("getGrade 85");
         int mark = 75;
-        String expResult = "F";
+        String expResult = "F"; 
         String result = StudentGrade.getGrade(mark);
         assertEquals(expResult, result);
     }
